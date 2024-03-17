@@ -1,0 +1,288 @@
+{
+  "jobIds": [
+    "44fa62a4-a4d6-4683-adb1-7f2b3dc6c2d5"
+  ],
+  "results": [
+    {
+      "jobId": "44fa62a4-a4d6-4683-adb1-7f2b3dc6c2d5",
+      "result": {
+        "data": {
+          "timestamp": "2024-03-15T08:01:50.25Z",
+          "rootActivityId": "a63b0c2d-1595-4c1d-bb06-c47b2b99a64d",
+          "descriptor": {
+            "Select": [
+              {
+                "Kind": 1,
+                "Depth": 0,
+                "Value": "G0",
+                "GroupKeys": [
+                  {
+                    "Source": {
+                      "Entity": "National Projects",
+                      "Property": "PROJECT NAME"
+                    },
+                    "Calc": "G0",
+                    "IsSameAsSelect": true
+                  }
+                ],
+                "Name": "2022 Agric Project.PROJECT NAME"
+              },
+              {
+                "Kind": 1,
+                "Depth": 0,
+                "Value": "G1",
+                "GroupKeys": [
+                  {
+                    "Source": {
+                      "Entity": "National Projects",
+                      "Property": "CODE"
+                    },
+                    "Calc": "G1",
+                    "IsSameAsSelect": true
+                  }
+                ],
+                "Name": "2022 Agric Project.CODE"
+              },
+              {
+                "Kind": 2,
+                "Value": "M0",
+                "Format": "\"₦\"#,0.00;-\"₦\"#,0.00;\"₦\"#,0.00",
+                "Subtotal": [
+                  "A0"
+                ],
+                "Name": "Sum(2022 Agric Project.AMOUNT)"
+              }
+            ],
+            "Expressions": {
+              "Primary": {
+                "Groupings": [
+                  {
+                    "Keys": [
+                      {
+                        "Source": {
+                          "Entity": "National Projects",
+                          "Property": "PROJECT NAME"
+                        },
+                        "Select": 0
+                      },
+                      {
+                        "Source": {
+                          "Entity": "National Projects",
+                          "Property": "CODE"
+                        },
+                        "Select": 1
+                      }
+                    ],
+                    "Member": "DM1",
+                    "SubtotalMember": "DM0"
+                  }
+                ]
+              }
+            },
+            "Version": 2
+          },
+          "metrics": {
+            "Version": "1.0.0",
+            "Events": [
+              {
+                "Id": "82227852-e95b-4004-bfd6-f8f24f415472",
+                "Name": "Execute Semantic Query",
+                "Component": "DSE",
+                "Start": "2024-03-15T08:01:50.2503237Z",
+                "End": "2024-03-15T08:01:50.297208Z"
+              },
+              {
+                "Id": "bc56ce41-e27f-4372-bd70-98252448ff5e",
+                "ParentId": "82227852-e95b-4004-bfd6-f8f24f415472",
+                "Name": "Execute DAX Query",
+                "Component": "DSE",
+                "Start": "2024-03-15T08:01:50.2503237Z",
+                "End": "2024-03-15T08:01:50.297208Z",
+                "Metrics": {
+                  "RowCount": 13
+                }
+              },
+              {
+                "Id": "F64230BD-CEF0-4BDD-A26C-AF7F6BBB5C87",
+                "ParentId": "bc56ce41-e27f-4372-bd70-98252448ff5e",
+                "Name": "Execute Query",
+                "Component": "AS",
+                "Start": "2024-03-15T08:01:50.287Z",
+                "End": "2024-03-15T08:01:50.297Z"
+              },
+              {
+                "Id": "B769D85A-2256-485F-A996-824301DB5BBA",
+                "ParentId": "F64230BD-CEF0-4BDD-A26C-AF7F6BBB5C87",
+                "Name": "Serialize Rowset",
+                "Component": "AS",
+                "Start": "2024-03-15T08:01:50.297Z",
+                "End": "2024-03-15T08:01:50.297Z"
+              }
+            ]
+          },
+          "fromCache": false,
+          "dsr": {
+            "Version": 2,
+            "MinorVersion": 1,
+            "DS": [
+              {
+                "N": "DS0",
+                "PH": [
+                  {
+                    "DM0": [
+                      {
+                        "S": [
+                          {
+                            "N": "A0",
+                            "T": 3
+                          }
+                        ],
+                        "A0": 1042184404.69
+                      }
+                    ]
+                  },
+                  {
+                    "DM1": [
+                      {
+                        "S": [
+                          {
+                            "N": "G0",
+                            "T": 1,
+                            "DN": "D0"
+                          },
+                          {
+                            "N": "G1",
+                            "T": 1,
+                            "DN": "D1"
+                          },
+                          {
+                            "N": "M0",
+                            "T": 3
+                          }
+                        ],
+                        "C": [
+                          0,
+                          0,
+                          200000000
+                        ]
+                      },
+                      {
+                        "C": [
+                          1,
+                          1,
+                          100000000
+                        ]
+                      },
+                      {
+                        "C": [
+                          2,
+                          2,
+                          42500000
+                        ]
+                      },
+                      {
+                        "C": [
+                          3,
+                          3,
+                          30188373.69
+                        ]
+                      },
+                      {
+                        "C": [
+                          4,
+                          4,
+                          42500000
+                        ]
+                      },
+                      {
+                        "C": [
+                          5,
+                          5,
+                          50000000
+                        ]
+                      },
+                      {
+                        "C": [
+                          6,
+                          6,
+                          200000000
+                        ]
+                      },
+                      {
+                        "C": [
+                          7,
+                          7,
+                          45000000
+                        ]
+                      },
+                      {
+                        "C": [
+                          8,
+                          8,
+                          50000000
+                        ]
+                      },
+                      {
+                        "C": [
+                          9,
+                          9,
+                          41996031
+                        ]
+                      },
+                      {
+                        "C": [
+                          10,
+                          10,
+                          40000000
+                        ]
+                      },
+                      {
+                        "C": [
+                          11,
+                          11,
+                          200000000
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "IC": true,
+                "HAD": true,
+                "ValueDicts": {
+                  "D0": [
+                    "VOCATIONAL SKILLS AND EMPOWERMENT TRAINING FOR WOMEN AND YOUTHS IN NIGER EAST SENATORIAL DISTRICT.",
+                    "SUPPLY OF EMPOWERMENT ITEMS FOR WOMEN AND YOUTHS IN SELECTED LGAS IN NIGER EAST SENATORIAL DISTRICT, NIGER STATE",
+                    "SKILLS ACQUISITION FOR 50 WOMEN AND YOUTHS ON ICT",
+                    "REHABILITATION OF CLASSROOMS AND PROVISION OF CLASSROOMS FURNITURE IN SELECTED SECONDARY SCHOOLS IN EKITI WEST LGA, EKITI STATE.",
+                    "EMPOWERMENT AND CAPACITY DEVELOPMENT OF 70 YOUTH AND WOMEN ON BEAD MAKING AND SOAP MAKING",
+                    "EMPOWERMENT AND CAPACITY DEVELOPMENT OF 60 YOUTHS ON ICT",
+                    "CONSTRUCTION OF NEW TOWN HALL AND FURNITURES IN PAIKO NIGER EAST SENATORIAL DISTRICT.",
+                    "CATERING AND EVENT MANAGEMENT TRAINING FOR 40 YOUTHS",
+                    "CAPACITY BUILDING FOR TAILORING AND FASHION DESIGN FOR 60 YOUTHS AND WOMEN.",
+                    "CAPACITY BUILDING FOR TAILORING AND FASHION DESIGN FOR 50 YOUTHS AND WOMEN",
+                    "CAPACITY BUILDING FOR AUTO GELLE AND COSMETOLOGY FOR 50 YOUTHS AND WOMEN",
+                    " CONSTRUCTION OF 2 ULTRA MODERN SKILL ACQUISITION CENTERS IN MINNA AND GAWU BABANGIDA NIGER EAST SENATORIAL DISTRICT"
+                  ],
+                  "D1": [
+                    "ERGP20247243",
+                    "ERGP20247245",
+                    "ERGP30205620",
+                    "ERGP20243981",
+                    "ERGP30205632",
+                    "ERGP30205577",
+                    "ERGP23173542",
+                    "ERGP30205600",
+                    "ERGP30205642",
+                    "ERGP30205586",
+                    "ERGP30205540",
+                    "ERGP20247244"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

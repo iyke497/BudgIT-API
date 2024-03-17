@@ -1,0 +1,906 @@
+{
+    "schemas": [
+        {
+            "modelId": 303809,
+            "schema": {
+                "Entities": [
+                    {
+                        "Name": "DateTableTemplate_6fae7f99-7dc6-4844-a148-cebb18865a19",
+                        "EdmName": "Sandbox.DateTableTemplate_6fae7f99_7dc6_4844_a148_cebb18865a19",
+                        "Private": true,
+                        "Properties": [
+                            {
+                                "Name": "Date",
+                                "DataType": 7,
+                                "DataCategory": "PaddedDateTableDates",
+                                "Hidden": true,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "ee9a3a31-ae00-4c22-b4ef-9f1e64ce16be"
+                            },
+                            {
+                                "Name": "Year",
+                                "DataType": 4,
+                                "DataCategory": "Years",
+                                "Hidden": true,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "07aef204-8055-4790-85e2-84181496be63"
+                            },
+                            {
+                                "Name": "MonthNo",
+                                "DataType": 4,
+                                "DataCategory": "MonthOfYear",
+                                "Hidden": true,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "1f3acb7d-3c9c-414d-aa54-611ee3fe7181"
+                            },
+                            {
+                                "Name": "Month",
+                                "DataType": 1,
+                                "DataCategory": "Months",
+                                "Hidden": true,
+                                "Column": {
+                                    "DefaultAggregate": 1,
+                                    "OrderBy": [
+                                        "MonthNo"
+                                    ]
+                                },
+                                "StableName": "cb4ff8d6-326c-4e00-a170-7e365148a278"
+                            },
+                            {
+                                "Name": "QuarterNo",
+                                "DataType": 4,
+                                "DataCategory": "QuarterOfYear",
+                                "Hidden": true,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "1f385aa7-1f48-4ef5-8347-16e0e54b0283"
+                            },
+                            {
+                                "Name": "Quarter",
+                                "DataType": 1,
+                                "DataCategory": "Quarters",
+                                "Hidden": true,
+                                "Column": {
+                                    "DefaultAggregate": 1,
+                                    "OrderBy": [
+                                        "QuarterNo"
+                                    ]
+                                },
+                                "StableName": "c4471c01-0c4e-4284-8b3c-823ec3ee25f7"
+                            },
+                            {
+                                "Name": "Day",
+                                "DataType": 4,
+                                "DataCategory": "DayOfMonth",
+                                "Hidden": true,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "27e04fcd-f73a-49fe-9546-6c0a9b3e5a2e"
+                            }
+                        ],
+                        "Hierarchies": [
+                            {
+                                "Name": "Date Hierarchy",
+                                "Levels": [
+                                    {
+                                        "Name": "Year",
+                                        "Column": "Year",
+                                        "StableName": "a1933272-2d3a-4bb7-91ae-1cc10a1f283b"
+                                    },
+                                    {
+                                        "Name": "Quarter",
+                                        "Column": "Quarter",
+                                        "StableName": "e881e7ef-8188-4757-a7e1-dc0f2e0286f1"
+                                    },
+                                    {
+                                        "Name": "Month",
+                                        "Column": "Month",
+                                        "StableName": "48b60e90-15f8-4607-afb6-b3b5b95e44b3"
+                                    },
+                                    {
+                                        "Name": "Day",
+                                        "Column": "Day",
+                                        "StableName": "5c7e9571-ac41-4776-8ef8-bc1d8cb05744"
+                                    }
+                                ],
+                                "StableName": "45a0aee4-fabe-411e-8302-fa9aa68422af"
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "ec897f2a-5645-45a9-a5c7-f8253f9355f5"
+                    },
+                    {
+                        "Name": "Transposed Budget",
+                        "EdmName": "Sandbox.Transposed_Budget",
+                        "Properties": [
+                            {
+                                "Name": "Code6",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "c2e4285a-b5f6-44a8-9243-7816ba8f3e17"
+                            },
+                            {
+                                "Name": "Code4",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "98437ed7-e03f-4922-8128-25dddfd12502"
+                            },
+                            {
+                                "Name": "Code2",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "f7fb90aa-5436-4936-8c7e-549ee43aba8e"
+                            },
+                            {
+                                "Name": "YEAR",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "b36bd8dc-f2cc-4c4a-87f5-a7f5b0901fa4"
+                            },
+                            {
+                                "Name": "MDA CODE",
+                                "EdmName": "MDA_CODE",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "a2806a79-d772-4754-bdb8-dc6ca49a13b2"
+                            },
+                            {
+                                "Name": "CODE",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "2be111f0-835f-4571-8f2e-7b8133a85966"
+                            },
+                            {
+                                "Name": "LINE ITEM",
+                                "EdmName": "LINE_ITEM",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "01e561b2-70ba-480d-af91-dfc1cdb4f8ac"
+                            },
+                            {
+                                "Name": "AMOUNT",
+                                "DataType": 3,
+                                "Column": {
+                                    "DefaultAggregate": 2
+                                },
+                                "StableName": "149c83cd-2b33-4f64-95a8-c225393b5b0e"
+                            },
+                            {
+                                "Name": "CODE_LENGTH",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 2
+                                },
+                                "StableName": "2d561220-a47b-49d2-ae3c-09172c925c59"
+                            },
+                            {
+                                "Name": "MDA Name",
+                                "EdmName": "MDA_Name",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "080a1f1c-19b4-4cf5-9a63-d2dbb95bade1"
+                            },
+                            {
+                                "Name": "Ministry Code",
+                                "EdmName": "Ministry_Code",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 3
+                                },
+                                "StableName": "287695a9-3bf1-43ce-8b7c-6e7e6ac0136f"
+                            },
+                            {
+                                "Name": "Mother Ministry",
+                                "EdmName": "Mother_Ministry",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "8923ec8b-67ac-4bf3-8cd2-a8ed01875d8f"
+                            },
+                            {
+                                "Name": "Old Mother Ministry",
+                                "EdmName": "Old_Mother_Ministry",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "c4dd864c-e9c2-4128-885a-b4b22c75f9b0"
+                            },
+                            {
+                                "Name": "fMother",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "31097ea2-4b9a-4a81-8fcc-3949738a0bbf"
+                            }
+                        ],
+                        "NavigationProperties": [
+                            {
+                                "Name": "Master Code2_Code2",
+                                "Active": true,
+                                "TargetEntity": "Master Code2",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            },
+                            {
+                                "Name": "Master Code4_4-Digit Codes",
+                                "Active": true,
+                                "TargetEntity": "Master Code4",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            },
+                            {
+                                "Name": "Master Code6_6-Digit Codes",
+                                "Active": true,
+                                "TargetEntity": "Master Code6",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            },
+                            {
+                                "Name": "Master Code8_8-Digit Codes",
+                                "Active": true,
+                                "TargetEntity": "Master Code8",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            },
+                            {
+                                "Name": "Master MDA_MDA CODE",
+                                "Active": true,
+                                "TargetEntity": "Master MDA",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            },
+                            {
+                                "Name": "Master Year_Year",
+                                "Active": true,
+                                "TargetEntity": "Master Year",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "5cd088a0-a7f3-4eb2-ac45-829b9ad21233"
+                    },
+                    {
+                        "Name": "Master Code2",
+                        "EdmName": "Sandbox.Master_Code2",
+                        "Properties": [
+                            {
+                                "Name": "Code2",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "a21aeb11-6a4c-41b6-a5ad-be79f24572f5"
+                            },
+                            {
+                                "Name": "Line Items with 2021 updates",
+                                "EdmName": "Line_Items_with_2021_updates",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "44c520da-a0e3-41d8-bc8c-2d760e6e14c5"
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "a69b4a27-5395-4273-b82e-6715676ca644"
+                    },
+                    {
+                        "Name": "Master Code4",
+                        "EdmName": "Sandbox.Master_Code4",
+                        "Properties": [
+                            {
+                                "Name": "4-Digit Codes",
+                                "EdmName": "v4_Digit_Codes",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "18ee598c-8e44-4f4b-98f7-0900d7e6e5ad"
+                            },
+                            {
+                                "Name": "Line Items with 2021 updates",
+                                "EdmName": "Line_Items_with_2021_updates",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "9a5f28d0-f98b-4477-8e7e-5b9650c29ba2"
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "76edafee-ed9a-4aa4-9532-13a6c9bf8ce5"
+                    },
+                    {
+                        "Name": "Master Code6",
+                        "EdmName": "Sandbox.Master_Code6",
+                        "Properties": [
+                            {
+                                "Name": "6-Digit Codes",
+                                "EdmName": "v6_Digit_Codes",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "3e58fd69-ff94-4e81-9651-7e5cb45013a3"
+                            },
+                            {
+                                "Name": "Line Items with 2021 updates",
+                                "EdmName": "Line_Items_with_2021_updates",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "70acd8b1-ef0c-4693-9a04-10a7675cb1cc"
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "74a13299-bea5-43ac-9e9b-471e68e447e0"
+                    },
+                    {
+                        "Name": "Master Code8",
+                        "EdmName": "Sandbox.Master_Code8",
+                        "Properties": [
+                            {
+                                "Name": "8-Digit Codes",
+                                "EdmName": "v8_Digit_Codes",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "1f31f190-6f5d-4b37-8395-70e4800dabf1"
+                            },
+                            {
+                                "Name": "Line Items with 2021 updates",
+                                "EdmName": "Line_Items_with_2021_updates",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "73b01fa3-d191-4a02-989b-01c1d4310382"
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "6ba72754-0979-45b2-a67c-00a981729852"
+                    },
+                    {
+                        "Name": "Master MDA",
+                        "EdmName": "Sandbox.Master_MDA",
+                        "Properties": [
+                            {
+                                "Name": "MDA CODE",
+                                "EdmName": "MDA_CODE",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "ccd50e6e-d9ab-4e7b-8f87-b8681cd99fc0"
+                            },
+                            {
+                                "Name": "MDA -Final List with 2021 updates",
+                                "EdmName": "MDA__Final_List_with_2021_updates",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "a6551bbf-5034-47c3-a132-29200bb462e9"
+                            },
+                            {
+                                "Name": "3-Digit Code",
+                                "EdmName": "v3_Digit_Code",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "2b239175-5fd7-46b7-99c4-dbf1474c853a"
+                            },
+                            {
+                                "Name": "Mother Ministry",
+                                "EdmName": "Mother_Ministry",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "3fdb9606-7cae-4409-a84f-252d07044449"
+                            }
+                        ],
+                        "NavigationProperties": [
+                            {
+                                "Name": "Master Ministry_3-Digit Code",
+                                "Active": true,
+                                "TargetEntity": "Master Ministry",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "2d018875-4d44-4b88-90cc-43d105a62b70"
+                    },
+                    {
+                        "Name": "Master Ministry",
+                        "EdmName": "Sandbox.Master_Ministry",
+                        "Properties": [
+                            {
+                                "Name": "3-Digit Code",
+                                "EdmName": "v3_Digit_Code",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "41b08053-6815-4759-beea-59607660c85f"
+                            },
+                            {
+                                "Name": "Mother Ministry/MDA - with 2021 Updates",
+                                "EdmName": "Mother_Ministry_MDA___with_2021_Updates",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "e535afed-9e98-403b-9f48-538baa7e18d6"
+                            },
+                            {
+                                "Name": "old name",
+                                "EdmName": "old_name",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "e67cebab-d7f0-4b90-ba9b-1959d167faad"
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "26efafbd-307e-47a2-9c04-24e0c8467a47"
+                    },
+                    {
+                        "Name": "Calculations",
+                        "EdmName": "Sandbox.Calculations",
+                        "Properties": [
+                            {
+                                "Name": "PERSONNEL COST",
+                                "EdmName": "PERSONNEL_COST",
+                                "DataType": 3,
+                                "FormatString": "\"₦\"#,0;-\"₦\"#,0;\"₦\"#,0",
+                                "Measure": {},
+                                "StableName": "51d3bd8d-d472-4513-8cac-a830d240971b"
+                            },
+                            {
+                                "Name": "OTHER RECURRENT COSTS",
+                                "EdmName": "OTHER_RECURRENT_COSTS",
+                                "DataType": 3,
+                                "FormatString": "\"₦\"#,0.00;-\"₦\"#,0.00;\"₦\"#,0.00",
+                                "Measure": {},
+                                "StableName": "97309524-f3f0-4e76-ad2b-aa19af6cef45"
+                            },
+                            {
+                                "Name": "xCAPITAL EXPENDITURE",
+                                "EdmName": "xCAPITAL_EXPENDITURE",
+                                "DataType": 1,
+                                "Measure": {},
+                                "StableName": "e197571b-7fb8-4a7d-9dc1-a77a246c62e6"
+                            },
+                            {
+                                "Name": "Total Budget COST",
+                                "EdmName": "Total_Budget_COST",
+                                "DataType": 3,
+                                "FormatString": "\"₦\"#,0.00;-\"₦\"#,0.00;\"₦\"#,0.00",
+                                "Measure": {},
+                                "StableName": "7a1e67bc-2ea4-4463-9f77-9de2be2a5202"
+                            },
+                            {
+                                "Name": "CAPITAL EXPENDITURE",
+                                "EdmName": "CAPITAL_EXPENDITURE",
+                                "DataType": 3,
+                                "FormatString": "\"₦\"#,0.00;-\"₦\"#,0.00;\"₦\"#,0.00",
+                                "Measure": {},
+                                "StableName": "a4b61219-954b-4ef5-aa54-c6d1c3e4c902"
+                            },
+                            {
+                                "Name": "xOTHER RECURRENT COSTS",
+                                "EdmName": "xOTHER_RECURRENT_COSTS",
+                                "DataType": 1,
+                                "Measure": {},
+                                "StableName": "821e9d53-4903-4d83-90fb-1a4bf01ba2df"
+                            },
+                            {
+                                "Name": "xPERSONNEL COST",
+                                "EdmName": "xPERSONNEL_COST",
+                                "DataType": 1,
+                                "Measure": {},
+                                "StableName": "7aee3f29-f228-4b27-b0a7-983bfb6c11b5"
+                            },
+                            {
+                                "Name": "xTotal Budget COST",
+                                "EdmName": "xTotal_Budget_COST",
+                                "DataType": 1,
+                                "Measure": {},
+                                "StableName": "b85db8a3-a7df-4b83-b848-161760bce6c8"
+                            },
+                            {
+                                "Name": "Govt. Owned Enterprise",
+                                "EdmName": "Govt__Owned_Enterprise",
+                                "DataType": 4,
+                                "Measure": {},
+                                "StableName": "15204bca-d2fb-48d5-a8fc-f7be66bb3fc9"
+                            },
+                            {
+                                "Name": "CAPEx",
+                                "DataType": 3,
+                                "Measure": {},
+                                "StableName": "8f24e1b3-34af-4139-99b1-eef42cf90cbc"
+                            },
+                            {
+                                "Name": "SELECTED SLICER",
+                                "EdmName": "SELECTED_SLICER",
+                                "DataType": 1,
+                                "Measure": {},
+                                "StableName": "d8ce86ce-1460-4833-ac30-cf9e1339baab"
+                            },
+                            {
+                                "Name": "GOEs",
+                                "DataType": 1,
+                                "Measure": {},
+                                "StableName": "fefd357c-cef6-4bf1-b65b-9956089a210c"
+                            },
+                            {
+                                "Name": "xYear",
+                                "DataType": 1,
+                                "Measure": {},
+                                "StableName": "b418ecf8-390d-4a5c-846b-d9580cf8ee5b"
+                            },
+                            {
+                                "Name": "Moda Ministry",
+                                "EdmName": "Moda_Ministry",
+                                "DataType": 1,
+                                "Measure": {},
+                                "StableName": "c9854a6a-1a27-4c58-b49e-8498c131c69c"
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "5af3e7ab-0ebc-40bc-b3f0-7aebaba5159f"
+                    },
+                    {
+                        "Name": "National Budgets",
+                        "EdmName": "Sandbox.National_Budgets",
+                        "Properties": [
+                            {
+                                "Name": "YEAR",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "5086c371-f6e2-4b76-b7b5-30b3328761cc"
+                            },
+                            {
+                                "Name": "MDA CODE",
+                                "EdmName": "MDA_CODE",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "e5520898-1eed-4173-8424-0b8792065482"
+                            },
+                            {
+                                "Name": "CODE",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 2
+                                },
+                                "StableName": "262cad8a-c83e-4216-9d46-df8a620da481"
+                            },
+                            {
+                                "Name": "LINE ITEM",
+                                "EdmName": "LINE_ITEM",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "fd2e1de5-7940-4283-8b08-bbe4cbc7dcdb"
+                            },
+                            {
+                                "Name": "AMOUNT",
+                                "DataType": 3,
+                                "Column": {
+                                    "DefaultAggregate": 2
+                                },
+                                "StableName": "208b070c-905e-448d-8bf6-d0dc50db7755"
+                            },
+                            {
+                                "Name": "CODE_LENGTH",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 2
+                                },
+                                "StableName": "76ac1e9d-1d4c-4ec2-b92a-7d1bc56594bf"
+                            }
+                        ],
+                        "NavigationProperties": [
+                            {
+                                "Name": "Master MDA_MDA CODE2",
+                                "Active": true,
+                                "TargetEntity": "Master MDA",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            },
+                            {
+                                "Name": "Master Year_Year2",
+                                "Active": true,
+                                "TargetEntity": "Master Year",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "ce9e3f8b-6196-4997-8c9c-cab2e1a7d699"
+                    },
+                    {
+                        "Name": "National Projects",
+                        "EdmName": "Sandbox.National_Projects",
+                        "Properties": [
+                            {
+                                "Name": "Year",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "d2ccd5de-8493-407a-b6a1-4d7fed74ecf3"
+                            },
+                            {
+                                "Name": "MDA CODE",
+                                "EdmName": "MDA_CODE",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "a987923a-2145-4b99-aadf-b0c501175284"
+                            },
+                            {
+                                "Name": "CODE",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "8e3daa0c-4389-4735-a636-8f03129117cc"
+                            },
+                            {
+                                "Name": "PROJECT NAME",
+                                "EdmName": "PROJECT_NAME",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "370ebb22-3434-4122-9758-af072c7dddb9"
+                            },
+                            {
+                                "Name": "TYPE",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "215a53e9-f492-4b7a-9c74-38a219dc9722"
+                            },
+                            {
+                                "Name": "AMOUNT",
+                                "DataType": 3,
+                                "FormatString": "\"₦\"#,0.00;-\"₦\"#,0.00;\"₦\"#,0.00",
+                                "Column": {
+                                    "DefaultAggregate": 2
+                                },
+                                "StableName": "8e5fb0cb-d1fc-4abe-b5da-989c0f8d001b"
+                            },
+                            {
+                                "Name": "MDA Name",
+                                "EdmName": "MDA_Name",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "d2a49b5f-d3ce-438b-a2c1-11b1335873c5"
+                            },
+                            {
+                                "Name": "Ministry Code",
+                                "EdmName": "Ministry_Code",
+                                "DataType": 1,
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "ec6d0edb-e956-41ec-a408-df1d717302bd"
+                            }
+                        ],
+                        "NavigationProperties": [
+                            {
+                                "Name": "Master MDA_MDA CODE3",
+                                "Active": true,
+                                "TargetEntity": "Master MDA",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            },
+                            {
+                                "Name": "National Budgets_MDA CODE2",
+                                "Active": false,
+                                "TargetEntity": "National Budgets",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 2
+                            },
+                            {
+                                "Name": "Master Year_Year3",
+                                "Active": true,
+                                "TargetEntity": "Master Year",
+                                "SourceMultiplicity": 2,
+                                "TargetMultiplicity": 0
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "fa7e2889-5fbb-4379-92ee-b4f8c1d6b480"
+                    },
+                    {
+                        "Name": "Master Year",
+                        "EdmName": "Sandbox.Master_Year",
+                        "Properties": [
+                            {
+                                "Name": "Year",
+                                "DataType": 4,
+                                "FormatString": "0",
+                                "Column": {
+                                    "DefaultAggregate": 1
+                                },
+                                "StableName": "1f5c252b-33a7-4d26-9799-b8623755a43a"
+                            }
+                        ],
+                        "Capabilities": {
+                            "CanEditStorageMode": false,
+                            "SupportsClustering": false,
+                            "SupportsBinByCount": false
+                        },
+                        "StableName": "11d15e9b-0dbc-4c94-a372-d5b2e3d02ca5"
+                    }
+                ],
+                "Capabilities": {
+                    "SupportsMedian": true,
+                    "SupportsPercentile": true,
+                    "SupportsScopedEval": true,
+                    "SupportsStringMinMax": true,
+                    "SupportsMultiTableTupleFilters": true,
+                    "SupportsTimeIntelligenceQuickMeasures": true,
+                    "SupportsBinnedLineSample": true,
+                    "SupportsOverlappingPointsSample": true,
+                    "SupportsInsights": true,
+                    "SupportsQna": true,
+                    "SupportsInstanceFilters": true,
+                    "Insights": {
+                        "SupportsDistributionFactors": true,
+                        "SupportsExplainChange": true,
+                        "SupportsExplore": true,
+                        "SupportsKeyDrivers": true,
+                        "SupportsRelatedInsights": true,
+                        "SupportsDecomposition": true,
+                        "SupportsExplainAnomalies": true,
+                        "SupportsCompatibleFields": true,
+                        "SupportsQuerySuggestions": true,
+                        "SupportsExplainVarianceToTarget": true,
+                        "SupportsGenerateSummaries": true
+                    },
+                    "SupportsSubqueryRegrouping": true,
+                    "SupportsTopNPerLevel": true,
+                    "SupportsScopedAggregates": true,
+                    "SupportsExtensionColumns": true,
+                    "IsQnaEnabled": true,
+                    "SupportsScopedDataReduction": true,
+                    "TransformCapabilities": {
+                        "SupportedTransforms": [
+                            "KMeansClustering",
+                            "SpatialClustering",
+                            "LargestDifferenceSummary",
+                            "CorrelationSummary",
+                            "TrendSummary",
+                            "Unpivot",
+                            "DetectAnomaly",
+                            "ExtractTrend",
+                            "TopRightHandCornerSummary",
+                            "SampleAndDetectAnomaly",
+                            "LargestCategorySummary",
+                            "ChangeSummary",
+                            "RegionWithMostPointsSummary",
+                            "LargestDivergenceSummary",
+                            "HighPointLowPointSummary",
+                            "AggregateSummary",
+                            "SampleTimeSeriesData"
+                        ]
+                    },
+                    "SupportsGroupSynchronization": true,
+                    "SupportsSparklineData": true,
+                    "SupportsVisualCalculations": true
+                }
+            },
+            "error": null
+        }
+    ]
+}
