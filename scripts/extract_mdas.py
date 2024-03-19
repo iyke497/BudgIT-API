@@ -1,10 +1,5 @@
 import csv
 import requests
-from openpyxl import Workbook
-
-wb = Workbook()
-ws = wb.active
-counter = 2
 
 ministries = []
 
@@ -16,9 +11,6 @@ with open('../files/mdas_2024.csv', 'r') as ministries_file:
 	csv_reader = csv.reader(ministries_file)
 	for line in  csv_reader:
 		ministries.append(line[0])
-
-#for ministry in ministries:
-#ministry = 'FEDERAL MINISTRY OF HEALTH AND SOCIAL WELFARE'
 
 def get_query(ministry):
 	query = {
@@ -287,13 +279,8 @@ def get_query_RT(ministry, RT):
 
 	return query_RT
 
-
-#data = requests.post(api_url, json=query, headers=headers).json()
-
 #This is the dictionary structure for the agencies in the response; the key for the agency is 'G0' agency['G0']
 #agencies = data['results'][0]['result']['data']['dsr']['DS'][0]['PH'][0]['DM0']
-
-#print(type(data))
 
 def find_key_in_structure(structure, target_key):
     """
@@ -343,10 +330,7 @@ def find_value_by_key(structure, target_key):
                 
     return None
 
-#value = find_value_by_key(data, 'RT')
-#print(f"Value found: {value[0][0]}")  # Output: Value found: 6
 #RT = data['results'][0]['result']['data']['dsr']['DS'][0]['RT'][0][0]
-
 
 for ministry in ministries:
 	data = requests.post(api_url, json=get_query(ministry), headers=headers).json()
@@ -355,25 +339,16 @@ for ministry in ministries:
 	agencies = data['results'][0]['result']['data']['dsr']['DS'][0]['PH'][0]['DM0']
 	for agency in agencies:
 		print(f"{ministry} === {agency['G0']}")
-		ws[f'A{counter}'].value = ministry
-		ws[f'B{counter}'].value = agency['G0']
-		counter = counter + 1
 
+	#Check if Restart Token exists in response data.
 	if find_key_in_structure(data, 'RT'):
-		value = find_value_by_key(data, 'RT')
+		value = find_value_by_key(data, 'RT') #Get the value of the Restart Token
 		RT = value[0][0]
 		data_after_RT = requests.post(api_url, json=get_query_RT(ministry, RT), headers=headers).json()
-		#print(RT)
-		#print(data_after_RT)
+		#Retrieve agencies in dictionary form.
 		agencies_after_RT = data_after_RT['results'][0]['result']['data']['dsr']['DS'][0]['PH'][0]['DM0']
 		for agency in agencies_after_RT:
 			print(f"{ministry} === {agency['G0']}")
-			ws[f'A{counter}'].value = ministry
-			ws[f'B{counter}'].value = agency['G0']
-
-
-
-	wb.save('output.xlsx')
 
 
 def call_api_RT():
@@ -386,7 +361,7 @@ def call_api_RT():
 		for agency in agencies_after_RT:
 			print(f"{ministry} === {agency['G0']}")
 
-			
+
 
 
 
